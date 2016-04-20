@@ -12,7 +12,7 @@ cp -f -R sdk/fy dexout/com
 cp -f sdk/close.png $dir/assets
 cp -f -R sdk/biduad_plugin $dir/assets
 echo 更新广告ID....
-./radid.sh dexout
+./radid.sh dexout $2 $3
 
 
 

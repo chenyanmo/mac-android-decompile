@@ -9,6 +9,7 @@ function error {
 	printf "	1.安装      --i apk  \n	2.反编译    --d apk  \n	3.打包      --b 目录  \n	4.签名      --s apk \n"
 	printf "	5.反编译dex --ddex dex  \n	6.打包dex   --bdex 目录  \n	7.反编译xml --dxml xml  \n"
 	printf "	8.解压file  --uzip file  \n"
+	printf "	9.dex to jar --d2j  \n"
 	
 }
 
@@ -68,6 +69,12 @@ if [ "$1" == "--uzip" ]; then
 	echo 正在解压-$2...
 	rm -rf $3
 	unzip $2 -d $3
+	exit
+fi
+
+if [ "$1" == "--d2j" ]; then
+	echo 正在dex2jar-$2...
+	./tools/dex2jar/dex2jar.sh "$2"
 	exit
 fi
 
