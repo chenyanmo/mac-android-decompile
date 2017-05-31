@@ -15,4 +15,5 @@ Makefile.in
 /depcomp
 /install-sh
 /missing
+.DS_Store
 /stamp-h1
